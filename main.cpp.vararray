@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+  /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+  vector<vector<int>> vecs;
+  vector<int> vec;
+  int n, q;
+
+  int numofele, v;
+
+  cin >> n >> q;  // the first line 2 2
+
+  for (int i = 0; i < n; ++i) {
+    cin >> numofele;
+    for (int l = 0; l < numofele; ++l) {
+      cin >> v;
+      vec.push_back(v);
+    }
+
+    vecs.push_back(vec);
+    vec.clear();
+  }
+
+  int arrayid;
+  int eleid;
+  for (int i = 0; i < q; i++) {
+    cin >> arrayid >> eleid;
+    cout << vecs.at(arrayid).at(eleid) << endl;
+  }
+  return 0;
+}
