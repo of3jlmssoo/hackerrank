@@ -32,8 +32,9 @@ int main() {
 
     getline(cin, input);
 
+
     // ignore the ending tags. assume input for this part is even number
-    if (i < N / 2) {
+    if (input[1] != '/') {
       input = input.substr(1, input.size() - 2);  // remove the first and the last charcter
 
       stringstream sstag{input};
@@ -64,9 +65,30 @@ int main() {
   //  if the attr found in the pari's first field, cout << the value(the second)
   for (auto q : queries) {
     stringstream ssq{q};
-    string tagpart, tag, attr_val_part, attr, val;
-    getline(ss, tagpart, '~');
-    getline(ss, attr_val_part, '~');
+    string tagpart, tag, attr, val;
+    getline(ssq, tagpart, '~');
+    getline(ssq, attr, '~');
+    // cout << "tagpart is " << tagpart << " and attr_val_part is "
+    //      << attr_val_part << endl;
+    ssq.str("");
+    ssq.clear();
+    ssq.str(tagpart);
+    while(getline(ssq,tag,'.')){
+      // cout << "the tag is " << tag << endl;
+    }
+
+    val = "";
+    for (auto v:HRML_map[tag]) {
+      if (v.first == attr)
+        val = v.second;
+
+    }
+    if (val=="")
+      cout << "Not Found!" << endl;
+    else {
+      val.erase(remove(val.begin(), val.end(), '"'), val.end()); 
+      cout << val << endl;
+    }
   }
   return 0;
 }

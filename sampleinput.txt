@@ -7,4 +7,64 @@ tag1.tag2~name
 tag1~name
 tag1~value
 
+
+Name1
+Not Found!
+HelloWorld
+
+
 <tag-name attribute1-name = "value1" attribute2-name = "value2" ...>
+
+
+
+Compiler Message
+Wrong Answer
+Input (stdin)
+
+Download
+10 10
+<a value = "GoodVal">
+<b value = "BadVal" size = "10">
+</b>
+<c height = "auto">
+<d size = "3">
+<e strength = "2">
+</e>
+</d>
+</c>
+</a>
+a~value
+b~value
+a.b~size
+a.b~value
+a.b.c~height
+a.c~height
+a.d.e~strength
+a.c.d.e~strength
+d~sze{-truncated-}
+
+Download to view the full testcase
+Expected Output
+
+Download
+GoodVal     O
+Not Found!  X
+10          O
+BadVal      O
+Not Found!  X
+auto        O
+Not Found!  O
+2           X
+Not Found!  O
+3           X
+
+pair<string, string> attr_val;                      // 基本データ
+vector<pair<string, string>> attr_val_vec;          // 基本データを複数保持
+map<string, vector<pair<string, string>>> tag;      // タグと複数基本データを関連付け
+// vector<map<string, vector<pair<string, string>>>> tags
+queue<map<string, vector<pair<string, string>>>>    // 
+a b
+a c d e
+
+pop_back
+
