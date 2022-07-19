@@ -1,3 +1,14 @@
+// Process Queries
+  // split a query into two parts, tag part and attr part. ~ is between them
+  //
+  //  attr    q.tags(V)         HRML_vec
+  //  v1      tag2              Vec1 : a vector element until a closing tagタグがクローズされる毎に別要素
+  //          tag4              Vec2 : クローズされるまでのタグの連なり(このケース(tag2, tag4)の場合2つの要素)
+  //                            M    : 直上のタグ毎にマップ(key=タグ名、value=ベクター)
+  //                            Vec3 : pair (attribute, value)
+  
+
+
 4 3
 <tag1 value = "HelloWorld">
 <tag2 name = "Name1" address = "thePlace">
