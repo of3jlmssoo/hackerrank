@@ -1,0 +1,140 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+// Implement the class Box
+// l,b,h are integers representing the dimensions of the box
+class Box {
+ private:
+  int l, b, h;
+
+ public:
+  Box() : l{0}, b{0}, h{0} {};
+  Box(int x, int y, int z) : l{x}, b{y}, h{z} {};
+  Box(const Box& source) {
+    l = source.l;
+    b = source.b;
+    h = source.h;
+  }
+  void swap(Box& source) noexcept {
+    std::swap(this->l, source.l);
+    std::swap(this->b, source.b);
+    std::swap(this->h, source.h);
+  }
+  Box& operator=(const Box& rhs) {
+    if (this == &rhs) return *this;
+    Box temp(rhs);
+    temp.swap(*this);
+
+    return *this;
+  }
+
+  ~Box() = default;
+
+  int getLength() { return l; };
+  int getBreadth() { return b; };
+  int getHeight() { return h; };
+  long long CalculateVolume() { return (long long)l * b * h; };
+  friend bool operator<(const Box& lhs, const Box& rhs) {
+    if (lhs.l < rhs.l or ((lhs.b < rhs.b) and (lhs.l == rhs.l)) or
+        ((lhs.h < rhs.h) and (lhs.b == rhs.b) and (lhs.l == rhs.l)))
+      return true;
+    return false;
+  }
+  friend std::ostream& operator<<(std::ostream& os, const Box& box);
+};
+std::ostream& operator<<(std::ostream& os, const Box& box) {
+  os << box.l << " " << box.b << " " << box.h;
+  return os;
+}
+
+// The class should have the following functions :
+
+// Constructors:
+// Box();
+// Box(int,int,int);
+// Box(Box);
+
+// int getLength(); // Return box's length
+// int getBreadth (); // Return box's breadth
+// int getHeight ();  //Return box's height
+// long long CalculateVolume(); // Return the volume of the box
+
+// Overload operator < as specified
+// bool operator<(Box& b)
+
+// Overload operator << as specified
+// ostream& operator<<(ostream& out, Box& B)
+
+// int main() {
+//   Box b1;
+//   cout << b1;
+//   Box b2(2, 3, 4);
+//   cout << "should be 2 " << b2.getLength() << endl;
+//   cout << "should be 3 " << b2.getBreadth() << endl;
+//   cout << "should be 4 " << b2.getHeight() << endl;
+//   cout << "should be 24 ";
+//   b2.CalculateVolume();
+//   cout << "bool true(1) " << (b1 < b2) << endl;
+//   cout << b2;
+//   return 0;
+// }
+
+void check2() {
+  int n;
+  cin >> n;
+  Box temp;
+  for (int i = 0; i < n; i++) {
+    int type;
+    cin >> type;
+    if (type == 1) {
+      cout << temp << endl;
+    }
+    if (type == 2) {
+      int l, b, h;
+      cin >> l >> b >> h;
+      Box NewBox(l, b, h);
+      temp = NewBox;
+      cout << temp << endl;
+    }
+    if (type == 3) {
+      int l, b, h;
+      cin >> l >> b >> h;
+      Box NewBox(l, b, h);
+      if (NewBox < temp) {
+        cout << "Lesser\n";
+      } else {
+        cout << "Greater\n";
+      }
+    }
+    if (type == 4) {
+      cout << temp.CalculateVolume() << endl;
+    }
+    if (type == 5) {
+      Box NewBox(temp);
+      cout << NewBox << endl;
+    }
+  }
+}
+
+int main() { check2(); }
+
+/*
+
+6
+2 1039 3749 8473
+4
+3 1456 3836 283
+3 729 3749 272
+2 4839 283 273
+4
+
+
+1039 3749 8473
+33004122803
+Greater
+Lesser
+4839 283 273
+373856301
+
+*/

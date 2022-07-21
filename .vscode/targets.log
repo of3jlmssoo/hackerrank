@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 09:08:04 2022
+# Make data base, printed on Thu Jul 21 18:26:40 2022
 
 # Variables
 
@@ -77,7 +77,7 @@ PATH = /home/hiroshisakuma/.local/bin:/home/hiroshisakuma/.local/bin:/usr/local/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hiroshisakuma-NUC10i7FNH:@/tmp/.ICE-unix/2010,unix/hiroshisakuma-NUC10i7FNH:/tmp/.ICE-unix/2010
+SESSION_MANAGER = local/hiroshisakuma-NUC10i7FNH:@/tmp/.ICE-unix/1544,unix/hiroshisakuma-NUC10i7FNH:/tmp/.ICE-unix/1544
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -109,7 +109,7 @@ QT_QPA_PLATFORMTHEME = gtk2
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 2114
+SSH_AGENT_PID = 1697
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
 # environment
@@ -121,11 +121,11 @@ HOME = /home/hiroshisakuma
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
-VSCODE_CODE_CACHE_PATH = /home/hiroshisakuma/.config/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = /home/hiroshisakuma/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LOGNAME = hiroshisakuma
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -167,7 +167,7 @@ LANGUAGE = ja_JP
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-ed310f74-1.69.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-ed310f74-1.69.2-main.sock
 # environment
 PANEL_GDK_CORE_DEVICE_EVENTS = 0
 # makefile
@@ -205,7 +205,7 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2572
+VSCODE_PID = 3976
 # variable set hash-table stats:
 # Load=97/1024=9%, Rehash=0, Collisions=7/119=6%
 
@@ -215,9 +215,9 @@ VSCODE_PID = 2572
 
 # Directories
 
-# . (device 66307, inode 2852043): 20 files, no impossibilities.
+# . (device 66307, inode 2852043): 28 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 28 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -267,12 +267,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 377 B / avg = 13 B
-# current buf: size = 8162 B / used = 377 B / count = 28 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 546 B / avg = 15 B
+# current buf: size = 8162 B / used = 546 B / count = 36 / avg = 15 B
 
-# strcache performance: lookups = 31 / hit rate = 9%
+# strcache performance: lookups = 39 / hit rate = 7%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=1/31=3%
-# Finished Make data base on Tue Jul 19 09:08:04 2022
+# Load=36/8192=0%, Rehash=0, Collisions=1/39=3%
+# Finished Make data base on Thu Jul 21 18:26:40 2022
 
  
