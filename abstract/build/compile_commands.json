@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract/build",
+  "command": "/usr/bin/clang++-10   -I/home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract/.  -g   -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract/main.cpp",
+  "file": "/home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract/main.cpp"
+}
+]

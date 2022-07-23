@@ -1,0 +1,131 @@
+#include <iostream>
+#include <string>
+#include <array>
+#include <algorithm>
+using namespace std;
+
+class Person
+{
+public:
+    Person()=default;
+    Person(Person &&) = default;
+    Person(const Person &) = default;
+    Person &operator=(Person &&) = default;
+    Person &operator=(const Person &) = default;
+    ~Person()=default;
+
+    string name;
+    int age;
+
+    static int pro_cur_id;
+    static int stu_cur_id;
+    virtual void getdata()  =0;
+    virtual void putdata()  =0;
+   private:
+    
+};
+int Person::pro_cur_id = 0;
+int Person::stu_cur_id = 0;
+
+
+
+class Professor : public Person
+{
+public:
+ Professor() { 
+    ++Person::pro_cur_id;
+    cur_id = Person::pro_cur_id;
+ };
+ Professor(Professor &&) = default;
+ Professor(const Professor &) = default;
+ Professor &operator=(Professor &&) = default;
+ Professor &operator=(const Professor &) = default;
+ ~Professor()=default;
+ int publications, cur_id;
+ void getdata() { cin >> name >> age >> publications; }
+ void putdata() { cout  << name << " " << age << " " << publications << " " << cur_id << endl; }
+private:
+    
+};
+
+
+class Student : public Person
+{
+public:
+ Student() { 
+    ++Person::stu_cur_id;
+    cur_id = Person::stu_cur_id;
+ };
+ Student(Student &&) = default;
+ Student(const Student &) = default;
+ Student &operator=(Student &&) = default;
+ Student &operator=(const Student &) = default;
+ ~Student()=default;
+
+//  vector<int> marks[6];
+    vector<int> marks;
+ int cur_id;
+ void getdata() {
+   cin >> name >> age;
+   for (size_t i = 0; i < 6; i++) {
+     string s;
+     cin >> s;
+    //  marks[i] = stoi(s);
+    marks.push_back(stoi(s));
+   }
+    }
+    void putdata() {
+      cout  << name << " " << age << " ";
+      int result{0};
+      for (size_t i = 0; i < 6; i++)
+      {
+       result+=marks[i] ;
+      }
+      cout << result << " " << cur_id << endl;
+    }
+
+private:
+    
+};
+
+
+int main(){
+    int N;
+    vector<Professor> vecpro;
+    vector<Student> vecstu;
+
+    cin >> N;
+    for (size_t i = 0; i < N; i++)
+    {
+      int ty;
+      cin >> ty;
+      if (ty==1) {
+        Professor p;
+        p.getdata();
+        vecpro.push_back(p);
+        // cout << endl << "(1) : ty is " << ty << " " << Person::pro_cur_id<< " " << Person::stu_cur_id << endl;
+        p.putdata();
+      } else if (ty==2) {
+        Student s;
+        s.getdata();
+        vecstu.push_back(s);
+        // cout << endl << "(2) : ty is " << ty << " " << Person::pro_cur_id<< " " << Person::stu_cur_id << endl;
+        s.putdata();
+      }else{
+        // cout <<endl <<  "(3) : ty is " << ty << " " << Person::pro_cur_id<< " " << Person::stu_cur_id << endl;
+        
+      }
+      
+    }
+    // for(auto p:vecpro) {
+    //   p.putdata();
+    // }
+    // for(auto s:vecstu) {
+    //     s.putdata();
+    // }
+    // for (size_t i = 0; i < vecpro.size(); i++)
+    // {
+        
+    // }
+    return 0;
+}

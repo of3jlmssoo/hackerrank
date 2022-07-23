@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "cmake",
+        "label": "CMake: configure",
+        "command": "configure",
+        "problemMatcher": [],
+        "detail": "CMake template configure task",
+        "group": "build"
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: clang++-10 アクティブなファイルのビルド",
+        "command": "/bin/clang++-10",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "-Wall",
+          "-std=c++17",
+          "${fileDirname}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "detail": "コンパイラ: /bin/clang++-10"
+      }
+    ]
+  }
+  

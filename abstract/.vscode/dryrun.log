@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract'
+make: Leaving directory '/home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

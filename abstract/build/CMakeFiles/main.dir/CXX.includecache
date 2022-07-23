@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hiroshisakuma/projects/cpp/hackerrank/prepare/abstract/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+sstream
+-
+
