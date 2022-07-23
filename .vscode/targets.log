@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 23 16:45:55 2022
+# Make data base, printed on Sat Jul 23 17:16:02 2022
 
 # Variables
 
@@ -75,7 +77,7 @@ PATH = /home/hiroshisakuma/.local/bin:/home/hiroshisakuma/.local/bin:/usr/local/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hiroshisakuma-NUC10i7FNH:@/tmp/.ICE-unix/1846,unix/hiroshisakuma-NUC10i7FNH:/tmp/.ICE-unix/1846
+SESSION_MANAGER = local/hiroshisakuma-NUC10i7FNH:@/tmp/.ICE-unix/1576,unix/hiroshisakuma-NUC10i7FNH:/tmp/.ICE-unix/1576
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -107,7 +109,7 @@ QT_QPA_PLATFORMTHEME = gtk2
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 2038
+SSH_AGENT_PID = 1680
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
 # environment
@@ -203,7 +205,7 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 LANG = C
 # environment
-VSCODE_PID = 9636
+VSCODE_PID = 3175
 # variable set hash-table stats:
 # Load=97/1024=9%, Rehash=0, Collisions=7/119=6%
 
@@ -271,8 +273,6 @@ GNUmakefile:
 # strcache performance: lookups = 46 / hit rate = 6%
 # hash-table stats:
 # Load=43/8192=1%, Rehash=0, Collisions=1/46=2%
-# Finished Make data base on Sat Jul 23 16:45:55 2022
+# Finished Make data base on Sat Jul 23 17:16:02 2022
 
  
-make: *** No rule to make target 'all'.  Stop.
-

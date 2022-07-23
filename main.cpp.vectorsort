@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int main() {
+  /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+  int N;
+  vector<int> vec;
+  string str;
+  cin >> N;
+  for (size_t i = 0; i < N; i++) {
+    cin >> str;
+    vec.push_back(stoi(str));
+  }
+
+  sort(vec.begin(), vec.end());
+
+  for (auto v : vec) {
+    cout << v << " ";
+  }
+  cout << endl;
+  return 0;
+}
