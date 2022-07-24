@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/hiroshisakuma/projects/cpp/hackerrank/prepare/build",
-  "command": "/usr/bin/clang++-10   -I/home/hiroshisakuma/projects/cpp/hackerrank/prepare/.  -g   -std=gnu++17 -o CMakeFiles/main.dir/main.LowerBound-STL.cpp.o -c /home/hiroshisakuma/projects/cpp/hackerrank/prepare/main.LowerBound-STL.cpp",
-  "file": "/home/hiroshisakuma/projects/cpp/hackerrank/prepare/main.LowerBound-STL.cpp"
+  "command": "/usr/bin/clang++-10   -I/home/hiroshisakuma/projects/cpp/hackerrank/prepare/.  -g   -std=gnu++17 -o CMakeFiles/main.dir/main.Maps-STL.cpp.o -c /home/hiroshisakuma/projects/cpp/hackerrank/prepare/main.Maps-STL.cpp",
+  "file": "/home/hiroshisakuma/projects/cpp/hackerrank/prepare/main.Maps-STL.cpp"
 }
 ]
